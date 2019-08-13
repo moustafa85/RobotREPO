@@ -34,8 +34,11 @@ ${Browser}    chrome
 SearchKeywords
     Open Browser  ${URL}     ${Browser}
     Set Selenium Implicit Wait    3
+    Capture Page Screenshot    
     Input Text    name=q    @{SearchKeys}[0] @{SearchKeys}[1]        
     Press Keys    name=q    ENTER
-    Sleep    2    
+    Capture Page Screenshot    
+    Sleep    2
+    Capture Page Screenshot        
     Close Browser
 
